@@ -1,0 +1,128 @@
+.project-full{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.web-article{
+  background: white;
+  width: 40%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 3px #000000aa;
+  border-radius: 5px;
+  align-self: center;
+}
+.web-article-description{
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+
+.web-article-image{
+display: flex;
+flex-direction: column;
+justify-content: stretch;
+align-items: stretch;
+width: 100%;
+height: 50%;
+
+}
+.web-article-image img{
+  width: 100%;
+}
+.web-article-title{
+  font-weight: bold;
+  text-align: center;
+  margin: 3px;
+}
+
+.author{
+  position: fixed;
+  top: 0;
+  right: 5%;
+  display: flex;
+  z-index: 10;
+  align-items: center;
+  height: 80px;
+  overflow:hidden;
+  flex-direction: row-reverse;
+}
+.author .circle{
+  border: solid 2px #55b3e6aa ;
+}
+.author .circle img{
+  width: 100%;
+}
+
+.description{
+  float: right;
+  width: 50%;
+  margin: 30px 0;
+  align-self  : flex-end;
+
+}
+.credits-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.credits-single{
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+.credits-user-name{
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.credits-skill{
+  background: #44444444;
+  padding: 4px 10px;
+  border-radius: 10px;
+  border: 1px solid #00000033;
+  color: white;
+  font-size: 0.8rem;
+  margin: 5px 4px;
+}
+.skill-list-tag{
+  display: flex;
+  flex-wrap: wrap;
+}
+.avatar-credits{
+  width: 50px;
+  height: 50px;
+}
+.avatar-credits img{
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .projects{
+    display: flex;
+    flex-direction: column;
+  }
+  .author{
+    position: static;
+    padding: 20px 0 ;
+    overflow: visible;
+    height: auto;
+    flex-direction: row;
+  }
+  .image-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-list div{
+    width: 95%;
+  }
+  .image-list img{
+    width: 100%;
+  }
+  .page-title{
+  font-size: 2rem;
+}
+}

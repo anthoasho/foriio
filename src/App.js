@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route} from "react-router-dom";
+import Navbar from "./Navbar";
+import Creators from "./Creators";
 import './App.css';
+import ScrollToTop from "./Hooks";
+import UserPage from "./UserPage";
+import ProjectPage from "./ProjectPage";
 
+function Container(props){
+  return(
+    <div className="container">{props.children} </div>
+  )
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router onUpdate={() => window.scrollTo(0, 0)} >
+    <Container>
+      <Navbar />
+      <ScrollToTop>
+        <Switch>
+          <Route exact path ="/">
+            <Creators />
+          </Route>
+          <Route path ="/user/:name" component={(props) => <UserPage {...props}/>}  />
+          <Route path ="/works/:workId" component ={(props) => <ProjectPage {...props} />} />
+        </Switch>
+        </ScrollToTop>
+      </Container>
+
+    </Router>
   );
 }
+
+
 
 export default App;

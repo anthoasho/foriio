@@ -1,0 +1,131 @@
+.user-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-page .project-list{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-page .projects{
+  align-items: center;
+  justify-content: center;
+}
+.profile-card{
+  border-radius: 10px;
+  min-width: 50%;
+  display: grid;
+  overflow: hidden;
+  margin-bottom: 60px;
+  grid-template:
+  "avatar avatar" 1fr
+  "avatar avatar" 1fr
+  "info info" 1fr
+  "links links" 50px
+  / 1fr 2fr;
+  width: 100%;
+}
+
+.profile-information{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  grid-area: info;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  display: grid;
+  grid-gap: 20px;
+  justify-content: space-around;
+  align-items: space-between;
+  padding: 15px;
+  grid-template:
+  "name profession" 1fr
+  "goal bio" 2fr
+  / 1fr 1fr;
+}
+.profile-bio {
+  grid-area: bio;
+  display: flex;
+  flex-direction: column;
+}
+.profile-bio-title{
+  align-self: flex-end;
+
+}
+.profile-goal{
+  grid-area: goal;
+}
+.profile-goal-text, .profile-bio-text{
+  padding: 10px;
+}
+
+.profile-name{
+  grid-area: name;
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 10px;
+}
+.profile-profession{
+  grid-area:profession;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile-avatar{
+  grid-area: avatar;
+  width: 300px;
+  height: 300px;
+}
+.profile-avatar img{
+  width: 100%;
+}
+.profile-links{
+  display: flex;
+  grid-area:links;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  color:white;
+  background: #55b3e6ae;
+  box-shadow: 1px 1px 1px #00000033;
+  border-radius: 10px;
+}
+.profile-links a{
+  color:#FFFFFF;
+}
+
+
+/* MOBILE LAYOUT */
+
+@media only screen and (max-width: 600px) {
+.profile-card{
+  width: 100%;
+display: flex;
+flex-direction: column;
+border-radius: 0px;
+
+}
+.profile-information{
+display: flex;
+flex-direction: column;
+}
+.mobile-margin{
+  margin: 2px 0;
+}
+
+.profile-links{
+  border-radius: 0px;
+  font-size: 1.5rem;
+  padding: 5px 0;
+}
+
+.list-user-project{
+  width: 100%;
+}
+
+}
