@@ -82,7 +82,7 @@ function Navbar(props){
     {showModal &&  <Modal closeModal={closeModal} {...props} viewHistory={viewHistory} /> }
     <nav className="navbar">
       <Link to="/"><Title className="site-title">forriio</Title> </Link>
-      <h1 onClick ={() => openModal()} > Viewing History </h1>
+      <h1 className="modal-clicker" onClick ={() => openModal()} > Viewing History </h1>
     </nav>
     </React.Fragment>
 )
