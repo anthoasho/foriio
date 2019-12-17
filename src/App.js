@@ -16,7 +16,7 @@ function Container(props){
 }
 function App() {
   return (
-    <Router onUpdate={() => window.scrollTo(0, 0)} >
+    <Router basename={(!process.env.NODE_ENV || process.env.NODE_ENV === 'development') ?process.env.DEV_URL: "foriio" } onUpdate={() => window.scrollTo(0, 0)} >
     <Container>
       <Navbar />
       <ScrollToTop>
