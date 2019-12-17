@@ -9,7 +9,6 @@ import './App.css';
 import ScrollToTop from "./Hooks";
 import UserPage from "./UserPage";
 import ProjectPage from "./ProjectPage";
-
 function Container(props){
   return(
     <div className="container">{props.children} </div>
@@ -30,7 +29,6 @@ function App() {
         </Switch>
         </ScrollToTop>
       </Container>
-
     </Router>
   );
 }

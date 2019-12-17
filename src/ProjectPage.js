@@ -10,7 +10,6 @@ function ProjectPage(props){
     );
     if(!loading){
       document.title = `foriio | ${data.work.title}`;
-
       return (
         <div>
           <Author {...data.work.author}/>
@@ -37,12 +36,10 @@ function ProjectPage(props){
     }
 }
 
-
 function ImageList(props){
   let images = props.images.map( (elem, i) => <Image key={`image-${props.id}-${i}`} src ={elem.urls.detail} />)
     return(<div className="image-list"> {images}</div>)
 }
-
 function WebArticle(props){
   console.log(props)
   return(
@@ -52,11 +49,9 @@ function WebArticle(props){
     <Title className="web-article-title"> {props.title}</Title>
     </a>
     <p className="web-article-description"> {props.description}</p>
-
     </div>
   )
 }
-
 function Video(props){
 return(
   <div
@@ -83,7 +78,6 @@ return(
   </div>
 )
 }
-
 
 function VideoPage(props){
   let videos = props.videos.map(elem => <Video key={`video-${elem.id}`} url ={elem.url} />)
@@ -126,6 +120,7 @@ function CreditSkills(props){
   let skills = props.skills.map((elem, i) => <span className="credits-skill" key={`credit-skill-${elem.name}-${i}`}> {elem.name} </span>)
   return (<div className="skill-list-tag"> {skills} </div>)
 }
+
 function Credits(props){
   let credits = props.credits.map((elem, i) => <div key={`credit-${elem.user.id}-${i}`} className="credits-single">
       <Link to={`/user/${elem.user.screen_name}`}>
@@ -137,7 +132,7 @@ function Credits(props){
       </div>
     </div>)
   return(
-    <div className="credits-container"> {credits}</div>
+    <div className="credits-container">{credits}</div>
   )
 }
 

@@ -122,7 +122,6 @@ h1{
 }
 .loading span:first-of-type{
   color: #55b3e6;
-
 }
 
 .loading span{
@@ -138,7 +137,50 @@ h1{
    text-align: center;
    margin: auto;
    text-shadow: 1px 1px 1px #00000013;
+}
 
+
+.modal{
+  position: fixed;
+  top:80px;
+  right: 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 1px 4px #00000033;
+  animation: slideIn 1s ease;
+}
+
+.modal-item{
+  width: 400px;
+  height: 80px;
+  background: white;
+  border-bottom: 1px solid gray;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.modal-name{
+  font-size: 100%;
+}
+.modal-type{
+  font-size: 70%;
+}
+@keyframes slideIn {
+  from{
+    transform: translateY(-100%);
+  }
+  to{
+    transform: translateY(0%);
+  }
 }
 @keyframes bounce {
   0%{
@@ -155,7 +197,27 @@ h1{
 .container{
   width: 100%;
   padding-top: 80px;
+  overflow-x: hidden;
 }
+.modal{
+  right:0;
+  left:0;
+  top: 80px;
+  width: 100%;
+}
+.modal-item{
+  padding: 25px;
+  text-overflow: ellipsis;
 
+}
+.page-title::after{
+  content: "";
+  width: 40%;
+  height: 4px;
+  position: absolute;
+  bottom: -10px;
+  right:-20px;
+  background: #55b3e6;
+}
 
 }
