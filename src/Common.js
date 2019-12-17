@@ -1,19 +1,24 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import DefaultAvatar from "./default-avatar.png";
 
 export function Title(props){
   return(
     <h1 className={props.className}> {props.children}</h1>
   )
 }
+
+
 export function Image(props){
   return(
     <div className = {props.className}>
-      <img alt={props.alt} src={props.src} />
+      <img onError={errorSrc} alt={props.alt} src={props.src || DefaultAvatar} />
     </div>
   )
 }
-
+function errorSrc(e){
+  e.target.src = DefaultAvatar;
+}
 export function Loading({string = "foriio"}){
   string = string.split("")
   const loading = string.map((elem, i) => <span key= {`loading-${i}`}style={{animationDelay: `${i * 0.08}s`}}>{elem}</span>)

@@ -80,9 +80,11 @@
   grid-area: avatar;
   width: 300px;
   height: 300px;
+  box-shadow: 0px 1px 6px #00000044;
+
 }
 .profile-avatar img{
-  width: 100%;
+  width: 100%!important;
 }
 .profile-links{
   display: flex;
