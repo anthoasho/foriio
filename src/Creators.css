@@ -123,8 +123,15 @@
   .list-user{
     display: flex;
     flex-direction: column;
+    padding: 5px
+}
+.creators{
+  width:100%;
 }
 .meta{
   align-self: flex-start;
+}
+.page-title{
+  width:100%;
 }
 }
