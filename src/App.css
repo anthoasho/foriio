@@ -210,7 +210,11 @@ h1{
 .modal-item{
   padding: 25px;
   text-overflow: ellipsis;
-
+}
+.page-title{
+  font-size: 1rem;
+  white-space: normal;
+  font-weight: bold;
 }
 .page-title::after{
   content: "";

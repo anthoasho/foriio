@@ -104,6 +104,12 @@ height: 50%;
     display: flex;
     flex-direction: column;
   }
+  .web-article{
+    width: 100%;
+  }
+  .description{
+    width: 100%;
+  }
   .author{
     position: static;
     padding: 20px 0 ;
@@ -124,7 +130,5 @@ height: 50%;
   .image-list img{
     width: 100%;
   }
-  .page-title{
-  font-size: 200%;
-}
+
 }
